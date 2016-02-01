@@ -1,0 +1,31 @@
+.breadcrumb {
+  li {
+    padding-left: 1em;
+    position: relative;
+    a, span{
+      background: linear-gradient(to right, #f5f5f5, #ccc);
+      padding: 6px;
+    }
+  }
+  li{
+    cursor: pointer;
+  }
+  li + li:before{
+    content: none;
+  }
+  li:after {
+    z-index: 1;
+    content: "";
+    padding: 0 5px;
+    color: #ccc;
+    border-left: 1em solid #ccc;
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+    position: absolute;
+    right: -24px;
+    top: -5px;
+  }
+  li:nth-child(2){
+    display: none;
+  }
+}

@@ -1,0 +1,157 @@
+.property-img-container{
+  position: relative;
+  .property-img-title{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+  }
+  img{
+    width: 100%;
+  }
+}
+$sutTitle: 25px;
+.main{
+  padding: 0 10px;
+  .sub-title{
+    margin-top: 5px;
+    .glyphicon{
+      font-size: $sutTitle;
+    }
+    span.txt{
+      position: relative;
+      top: -4px;
+      font-size: 15px;
+    }
+  }
+  .room-desc{
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+    img{
+      float: left;
+      margin-right: 10px;
+    }
+    .title-container{
+      position: absolute;
+      margin-left: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      .title{
+        font-weight: bold;
+        font-size: 20px;
+      }
+      span{
+        font-weight: bold;
+      }
+    }
+  }
+
+  .share-container{
+    display: flex;
+    align-items: center;
+    p{
+      margin-bottom: 0;
+      margin-left: 10px;
+    }
+  }
+
+  .facilities-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    li{
+      list-style: none;
+      min-width: 50%;
+      padding: 10px;
+    }
+  }
+}
+
+.mt10{
+  margin-top: 10px;
+}
+.w100{
+  width: 100%;
+}
+
+@media only screen and (min-width:768px){
+  .property-img-container{
+    position: relative;
+    .property-img-title{
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: auto;
+    }
+  }
+  .brief-info{
+    overflow: hidden;
+    .contact-expert-block{
+      float: right;
+      width: 30%;
+      margin-right: 5%;
+    }
+    p{
+      float: left;
+      width: 60%;
+      margin-top: 20px;
+    }
+    button{
+      float: right;
+      width: 30%;
+      margin-right: 5%;
+      margin-top: 20px;
+    }
+    .sub-title{
+      margin-top: 20px;
+    }
+  }
+  .hidden-gt-sm{
+    display: none;
+  }
+  .btn-group{
+    float: left;
+    width: 20%;
+    .dropdown-menu{
+      display: inline-block;
+      border: none;
+      box-shadow: none;
+      position: relative;
+      width: auto;
+      border: 1px solid #ccc;
+      padding: 10px 0;
+      li{
+        padding: 0 10px;
+        margin-top: 5px;
+        &.active{
+          background: gray;
+          border: 1px solid black;
+          &:after, &:before{
+            content: '';
+            position: absolute;
+            border-left: 10px solid gray;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            right: -9px;
+          }
+          &:after{
+            z-index: 1;
+          }
+          &:before{
+            border-left: 10px solid black;
+            right: -10px;
+          }
+        }
+      }
+    }
+  }
+  .room-content{
+    float: left;
+    width: 80%;
+  }
+  .main .facilities-container li{
+    min-width: 30%;
+  }
+  .breadcrumb li:nth-child(2){
+    display: inline-block !important;
+  }
+}
